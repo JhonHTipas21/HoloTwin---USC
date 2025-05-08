@@ -1,18 +1,9 @@
-# src/backend/Utils/conexion_db.py
-# codigo encargado de establecer la conexión a la base de datos MySQL
-import mysql.connector
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-def conectar_bd():
-    try:
-        conexion = mysql.connector.connect(
-            host="localhost",
-            user="tu_usuario",
-            password="tu_contraseña",
-            database="HoloTwinDB"
-        )
-        if conexion.is_connected():
-            print("Conexión exitosa a la base de datos")
-        return conexion
-    except mysql.connector.Error as error:
-        print(f"Error al conectar a la base de datos: {error}")
-        return None
+# Direct database configuration
+DATABASE_URL = "postgresql://postgres:jhon2003@localhost:5432/holotwindb"
+
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
