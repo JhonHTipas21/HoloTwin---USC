@@ -51,5 +51,4 @@ Su objetivo principal es promover la sostenibilidad energética en entornos univ
 ## Contribuciones
 ¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para discutir mejoras al proyecto.
 
-## Licencia
-[Inserte tipo de licencia aquí]
+
