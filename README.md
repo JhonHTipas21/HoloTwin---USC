@@ -1,30 +1,55 @@
-# HoloTwin---USC
-1. Descripción General
-HOLOTWIN es un gemelo digital desarrollado para la monitorización, análisis y simulación del consumo energético de la sala de juegos del Bloque 5 en la Universidad Santiago de Cali. Este proyecto integra visualización 3D (Unity), generación y análisis de datos energéticos (IA), y gestión de información (backend con FastAPl y PostgreSQL), promoviendo la sostenibilidad energética en entornos universitarios.
-2. Componentes Tecnológicos
-2.1 Frontend - Visualización y Simulación
-• Tecnología principal: Unity (Motor gráfico 3D)
-• Lenguaje: C#
-• Objetivo: Visualizar en tiempo real el consumo energético, ejecutar simulaciones de eficiencia, mostrar alertas o recomendaciones del sistema de lA.
-2.2 Backend - Núcleo Lógico y
-Comunicacional
-• Framework: FastAPI (Python)
-• Lenguajes y librerías: Python 3.10+, FastAPI,
-SQLAlchemy, Pydantic, JWT, Uvicorn
-• Arquitectura: API RESTful modular
-• Servidor ASGI: Uvicorn, por su alto rendimiento en aplicaciones asincrónicas.
-2.3 Base de Datos
-• Motor: PostgreSQL
-• ORM: SQLAlchemy
-• Estructura:
-• users (credenciales, roles, tokens)
-• devices (equipos eléctricos y metadatos)
-• energy_data (consumo energético por dispositivo, timestamp, fuente)
-• recommendations (salidas del sistema de
-IA)
-2.4 Sensores Sintéticos
-• Generación de datos ficticios: Scripts Python que simulan valores realistas para consumo energético, humedad, temperatura, tiempo de uso por dispositivo.
-2.5 Motor de Inteligencia Artificial
-• Modelo supervisado (ML): Regresión múltiple, árbol de decisión, o Random Forest para predecir consumo y COz.
-• Entrenamiento local: Dataset generado con sensores sintéticos.
-• Output: JSON con sugerencias de optimización energética.
+# HoloTwin - USC
+
+## Descripción General
+**HOLOTWIN** es un gemelo digital diseñado para la monitorización, análisis y simulación del consumo energético en la sala de juegos del Bloque 5 de la Universidad Santiago de Cali. 
+
+El proyecto combina:
+- Visualización 3D interactiva
+- Generación y análisis de datos mediante IA
+- Gestión avanzada de información
+
+Su objetivo principal es promover la sostenibilidad energética en entornos universitarios mediante tecnologías innovadoras.
+
+## Arquitectura del Sistema
+
+### 🖥 Frontend - Visualización 3D
+**Tecnología principal:** Unity (Motor gráfico 3D)  
+**Lenguaje de programación:** C#  
+
+**Funcionalidades:**
+- Visualización en tiempo real del consumo energético
+- Simulaciones de eficiencia energética
+- Visualización de alertas y recomendaciones generadas por IA
+
+### ⚙ Backend - Lógica y Comunicación
+**Framework principal:** FastAPI (Python)  
+
+**Stack tecnológico:**
+- Python 3.10+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- JWT (JSON Web Tokens)
+- Uvicorn
+
+**Características:**
+- Arquitectura API RESTful modular
+- Servidor ASGI (Uvicorn) para alto rendimiento en operaciones asíncronas
+
+### 🗃 Base de Datos
+**Motor de base de datos:** PostgreSQL  
+**ORM:** SQLAlchemy  
+
+**Estructura principal:**
+| Tabla              | Descripción                                  |
+|--------------------|---------------------------------------------|
+| `users`            | Credenciales, roles y tokens de acceso      |
+| `devices`          | Equipos eléctricos y sus metadatos          |
+| `energy_data`      | Registros de consumo por dispositivo        |
+| `recommendations`  | Salidas del sistema de IA y recomendaciones |
+
+## Contribuciones
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request para discutir mejoras al proyecto.
+
+## Licencia
+[Inserte tipo de licencia aquí]
