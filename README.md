@@ -132,7 +132,3 @@ pie
 6. **Emojis** para mejor scaneo visual (opcional)
 7. **Listas de roadmap** con checkboxes
 
-Puedes:
-- Añadir imágenes de diagramas (como sugerí antes)
-- Incluir badges de CI/CD si aplica
-- Personalizar los emojis según tu estilo
