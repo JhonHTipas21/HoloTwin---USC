@@ -1,37 +1,37 @@
-# 🧠 HoloTwin — USC
+# HoloTwin - Universidad Santiago de Cali
 
-**HoloTwin** es un gemelo digital en desarrollo del **Bloque 5** de la Universidad Santiago de Cali, enfocado en la simulación y visualización del consumo energético en tiempo real. El proyecto se construye como una aplicación de escritorio con un enfoque modular basado en una arquitectura en **tres capas**.
+## **🎯 Descripción**
 
----
-
-## 🚧 Estado actual del proyecto
-
-Actualmente nos encontramos trabajando en el **frontend de escritorio con WPF (.NET 6)** para la visualización de datos, integrando gráficos mediante **LiveCharts**.
+HoloTwin es un proyecto de gemelo digital que simula el consumo energético del Bloque 5 de la Universidad Santiago de Cali. El objetivo del proyecto es desarrollar una simulación en Unity que permita visualizar y analizar el consumo energético del edificio en tiempo real y generar reportes históricos para evaluar su eficiencia energética.
 
 ---
 
-## 🔧 Tecnologías previstas
+## **🚀 Tecnologías utilizadas**
 
-| Capa            | Tecnología                     |
-|------------------|--------------------------------|
-| **Frontend**     | WPF (.NET 6), Unity WebGL      |
-| **Lógica**       | Python (Flask o FastAPI), JWT  |
-| **Base de datos**| PostgreSQL                     |
-| **DevOps**       | Docker, Swagger, HTTPS, Redis (opcional) |
+- **Frontend:**
+  - **Unity:** Para la visualización en 3D del gemelo digital.
+  - **C#**: Lenguaje principal utilizado en Unity para la lógica del frontend.
+  
+- **Backend:**
+  - **Python**: Para la lógica del servidor, usando frameworks como Flask o FastAPI para el desarrollo de la API.
+  
+- **Base de Datos:**
+  - **PostgreSQL**: Para la gestión de datos del sistema.
+  
+- **Contenedores y virtualización:**
+  - **Docker**: Para la contenedorización del backend y la base de datos.
 
-> 🔄 El sistema seguirá una arquitectura cliente-servidor, y Unity será usado para el entorno 3D WebGL simulado. Esta primera versión se enfoca en la parte local de escritorio.
+- **Autenticación:**
+  - **JWT**: Para la autenticación de los usuarios.
+
+- **Documentación y pruebas:**
+  - **Swagger**: Para la documentación interactiva de la API.
+  - **Redis** (opcional): Para optimización de la caché en el backend.
+
+- **Otras herramientas:**
+  - **VS Code**: IDE utilizado para el desarrollo tanto del frontend como del backend.
 
 ---
-
-## ✅ Avances realizados
-
-- Configuración del entorno en **Visual Studio Code** con `.NET 6`.
-- Creación de `MainWindow.xaml` y su lógica en C# (`MainWindow.xaml.cs`).
-- Implementación de dos **gráficos de líneas** usando `LiveChartsCore.SkiaSharpView.WPF`.
-- Se preparó el archivo `.csproj` con los paquetes necesarios (`LiveCharts`, `SkiaSharp`, etc.).
-
----
-
 ## 🗂️ Estructura actual del proyecto
 
 ```plaintext
@@ -50,27 +50,45 @@ HoloTwin---USC/
 │       ├── frontend.csproj
 │       ├── bin/
 │       └── obj/
+```
 
 ---
 
-## ▶️  Cómo ejecutar (WPF)
-1. Abre una terminal y ubícate en la carpeta del frontend:
-cd src/frontend
+## **✅ Estado actual del desarrollo**
 
-2.Restaura y ejecuta el proyecto:
-dotnet restore
-dotnet run
-
----
-
-##📌 Requisitos
-.NET 6 SDK
-Visual Studio Code
-Extensiones recomendadas:
-C#
-.NET Install Tool
-NuGet Package Manager
+- [x] Interfaz WPF iniciada
+- [x] Implementación de gráficos con LiveCharts
+- [x] Estructura de carpetas organizada
+- [x] Proyecto compilando correctamente
+- [ ] Backend en desarrollo por otro miembro del equipo
+- [ ] Simulación final en Unity pendiente
 
 ---
 
-##🛠️ Proyecto en desarrollo por estudiantes de la Universidad Santiago de Cali.
+
+## **📋 Requisitos**
+
+- **Frontend:**
+  - **Unity (versión 2021 o superior)**
+  - **C#**
+  
+- **Backend:**
+  - **Python 3.x**
+  - **Flask o FastAPI** (para el desarrollo de la API)
+  - **PostgreSQL** (base de datos)
+  
+- **Contenedores:**
+  - **Docker** (para contenedores y orquestación)
+
+- **Dependencias del Proyecto:**
+  - **JWT** para autenticación.
+  - **Swagger** para la documentación de la API.
+
+ 
+---
+
+## **👨‍🎓 Creado por estudiantes de la Universidad Santiago de Cali**
+
+Este proyecto es parte del trabajo académico realizado por estudiantes de la Universidad Santiago de Cali como parte de un proyecto para simular el consumo energético de un edificio universitario utilizando tecnologías avanzadas como gemelos digitales, simulaciones en tiempo real, y análisis de datos.
+
+---
