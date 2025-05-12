@@ -10,7 +10,7 @@ router = APIRouter()
 @router.get("/recomendaciones")
 def obtener_recomendaciones(usuario_id: int, db: Session = Depends(SessionLocal)):
     """
-    Obtiene recomendaciones personalizadas basadas en el historial de consumo de un usuario.
+    Obtiene recomendaciones personalizadas y adapatadas basadas en el historial de consumo de un usuario.
 
     Args:
         usuario_id (int): Identificador del usuario para el cual se generarán las recomendaciones

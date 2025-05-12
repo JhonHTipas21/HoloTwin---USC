@@ -1,6 +1,6 @@
 def generar_recomendaciones(consumos: list[float]) -> list[str]:
     """
-    Genera recomendaciones de ahorro energético basadas en el historial de consumo.
+    Genera las recomendaciones de ahorro energético basadas en el historial de consumo.
 
     Args:
         consumos (list[float]): Lista de valores históricos de consumo energético en kWh

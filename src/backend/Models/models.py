@@ -5,7 +5,7 @@ from ..Utils.conexion_db import Base
 
 class Usuario(Base):
     """
-    Modelo que representa a un usuario en el sistema.
+    Modelo que va representa a un usuario en el sistema.
 
     Attributes:
         id (int): Identificador único del usuario

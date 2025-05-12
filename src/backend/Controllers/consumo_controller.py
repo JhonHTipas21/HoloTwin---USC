@@ -11,7 +11,7 @@ def get_db():
     """
     Función de dependencia de base de datos que crea y gestiona sesiones.
     Yields:
-        Session: Sesión de base de datos SQLAlchemy
+        Session: Sesión de base de datos SQLAlchemy en PG4ADMIN DE POSTGRES
     """
     db = SessionLocal()
     try:

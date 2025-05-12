@@ -34,5 +34,5 @@ Base = declarative_base()
 """
 Clase base declarativa de SQLAlchemy.
 Todas las clases de modelo deben heredar de esta clase para
-mapear las tablas de la base de datos.
+mapear las tablas de la base de datos en Postgres.
 """

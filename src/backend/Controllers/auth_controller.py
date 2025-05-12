@@ -9,7 +9,7 @@ from ..Models import models
 # Crear una instancia del router FastAPI para los endpoints de autenticación
 router = APIRouter()
 
-# Configuración de constantes de seguridad
+# Configuración de constantes de seguridad en los recomendadroes
 SECRET_KEY = "CLAVESECRETA"  # Clave utilizada para la encriptación del token JWT
 ALGORITHM = "HS256"  # Algoritmo utilizado para la generación del token JWT
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")  # Configuración del hash de contraseñas
