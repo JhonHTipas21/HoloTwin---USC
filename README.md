@@ -53,7 +53,7 @@ HoloTwin---USC/
 
 ---
 
-▶️ Cómo ejecutar (WPF)
+## ▶️  Cómo ejecutar (WPF)
 1. Abre una terminal y ubícate en la carpeta del frontend:
 cd src/frontend
 
@@ -63,7 +63,7 @@ dotnet run
 
 ---
 
-📌 Requisitos
+##📌 Requisitos
 .NET 6 SDK
 Visual Studio Code
 Extensiones recomendadas:
@@ -73,4 +73,4 @@ NuGet Package Manager
 
 ---
 
-🛠️ Proyecto en desarrollo por estudiantes de la Universidad Santiago de Cali.
+##🛠️ Proyecto en desarrollo por estudiantes de la Universidad Santiago de Cali.
