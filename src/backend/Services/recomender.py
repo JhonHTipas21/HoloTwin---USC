@@ -1,28 +1,17 @@
-from typing import Dict, List
+from .gemini_client import generate_recommendation
 
-def generar_recomendaciones(datos: Dict) -> List[str]:
+
+def generar_recomendacion_energia(sala: str, consumo: float, dispositivos: list) -> str:
     """
-    Genera recomendaciones basadas en los datos de consumo y ambiente.
-    
-    Args:
-        datos (Dict): Diccionario con datos de consumo y ambiente
-            - consumo_total (float): Consumo total de energía
-            - temperatura (float): Temperatura actual
-            - ac_encendido (bool): Estado del aire acondicionado
-            - hora (str): Hora actual en formato "HH:MM"
-    
-    Returns:
-        List[str]: Lista de recomendaciones
+    Genera una recomendación de optimización energética basada en los datos de entrada.
     """
-    recomendaciones = []
-    
-    # Analizar consumo
-    if datos["consumo_total"] < 100:
-        recomendaciones.append("Consumo óptimo detectado. No se requieren acciones.")
-    else:
-        if datos["ac_encendido"] and datos["temperatura"] < 24:
-            recomendaciones.append("Considere aumentar la temperatura del aire acondicionado.")
-        if "hora" in datos and (datos["hora"].startswith("11:") or datos["hora"].startswith("12:")):
-            recomendaciones.append("Considere reducir el consumo durante las horas pico.")
-    
-    return recomendaciones if recomendaciones else ["No hay recomendaciones específicas en este momento muchas gracias."]
+    prompt = (
+        f"Estoy desarrollando un gemelo digital para la sala de juegos '{sala}', que consume aproximadamente "
+        f"{consumo} kWh. Entre los dispositivos hay: {', '.join(dispositivos)}. "
+        "¿Podrías generar una recomendación de eficiencia energética que ayude a reducir el consumo eléctrico "
+        "en este espacio, considerando también el confort de los usuarios y posibles medidas sostenibles como sensores, "
+        "automatización, o energía renovable?"
+    )
+
+    respuesta = generate_recommendation(prompt)
+    return respuesta
