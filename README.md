@@ -16,18 +16,15 @@ Desarrollar una interfaz 3D funcional y conectada a inteligencia artificial, que
 ## 🧱 Estructura del Repositorio
 
 HoloTwin---USC/
-├── docs/ ← documentación general
-├── frontend/ ← módulo frontend Unity
-│ └── unity/
-│ └── Assets/
-│ └── HOLOTWIN_UI/
-│ ├── Scripts/
-│ │ └── UiManager.cs
-│ └── README.md
+├── frontend/
+│   └── unity/
+│       └── Assets/
+│           └── HOLOTWIN_UI/
+│               ├── Scripts/
+│               │   └── UiManager.cs
+│               └── README.md
 ├── .gitignore
-├── CHANGELOG.md
-└── README.md ← (este archivo)
-
+└── README.md
 
 ---
 
