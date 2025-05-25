@@ -14,11 +14,12 @@ Este módulo contiene el avance funcional del frontend del sistema HOLOTWIN, des
 ---
 
 ## 🧱 Estructura
-Assets/
-└── HOLOTWIN_UI/
+```text
+HOLOTWIN_UI/
 ├── Scripts/
-│ └── UiManager.cs
+│   └── UiManager.cs
 └── README.md
+```
 
 ---
 
