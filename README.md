@@ -14,7 +14,7 @@ Desarrollar una interfaz 3D funcional y conectada a inteligencia artificial, que
 ---
 
 ## 🧱 Estructura del Repositorio
-
+```text
 HoloTwin---USC/
 ├── frontend/
 │   └── unity/
@@ -25,6 +25,8 @@ HoloTwin---USC/
 │               └── README.md
 ├── .gitignore
 └── README.md
+```
+
 
 ---
 
