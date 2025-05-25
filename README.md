@@ -1,94 +1,70 @@
-# HoloTwin - Universidad Santiago de Cali
+# HOLOTWIN — Sistema Inteligente de Monitoreo Energético 🎮⚡
 
-## **🎯 Descripción**
+Este repositorio contiene el módulo **frontend del sistema HOLOTWIN**, desarrollado como parte de un gemelo digital académico para la Universidad Santiago de Cali.
 
-HoloTwin es un proyecto de gemelo digital que simula el consumo energético del Bloque 5 de la Universidad Santiago de Cali. El objetivo del proyecto es desarrollar una simulación en Unity que permita visualizar y analizar el consumo energético del edificio en tiempo real y generar reportes históricos para evaluar su eficiencia energética.
+> **Rama activa:** `develop---Vidal`  
+> **Autor del avance:** [Juan David Vidal]
+
+---
+
+## 🎯 Objetivo del Proyecto
+
+Desarrollar una interfaz 3D funcional y conectada a inteligencia artificial, que permita visualizar y optimizar el consumo energético de una sala de juegos universitaria a través de un gemelo digital.
 
 ---
 
-## **🚀 Tecnologías utilizadas**
+## 🧱 Estructura del Repositorio
 
-- **Frontend:**
-  - **Unity:** Para la visualización en 3D del gemelo digital.
-  - **C#**: Lenguaje principal utilizado en Unity para la lógica del frontend.
-  
-- **Backend:**
-  - **Python**: Para la lógica del servidor, usando frameworks como Flask o FastAPI para el desarrollo de la API.
-  
-- **Base de Datos:**
-  - **PostgreSQL**: Para la gestión de datos del sistema.
-  
-- **Contenedores y virtualización:**
-  - **Docker**: Para la contenedorización del backend y la base de datos.
-
-- **Autenticación:**
-  - **JWT**: Para la autenticación de los usuarios.
-
-- **Documentación y pruebas:**
-  - **Swagger**: Para la documentación interactiva de la API.
-  - **Redis** (opcional): Para optimización de la caché en el backend.
-
-- **Otras herramientas:**
-  - **VS Code**: IDE utilizado para el desarrollo tanto del frontend como del backend.
-
----
-## 🗂️ Estructura actual del proyecto
-
-```plaintext
 HoloTwin---USC/
+├── docs/ ← documentación general
+├── frontend/ ← módulo frontend Unity
+│ └── unity/
+│ └── Assets/
+│ └── HOLOTWIN_UI/
+│ ├── Scripts/
+│ │ └── UiManager.cs
+│ └── README.md
 ├── .gitignore
-├── README.md
-├── docs/
-│   └── (documentación futura)
-├── src/
-│   ├── backend/                  ← (en desarrollo por Jhon Harvey Tipas)
-│   └── frontend/
-│       ├── App.xaml
-│       ├── App.xaml.cs
-│       ├── MainWindow.xaml
-│       ├── MainWindow.xaml.cs
-│       ├── frontend.csproj
-│       ├── bin/
-│       └── obj/
-```
+├── CHANGELOG.md
+└── README.md ← (este archivo)
+
 
 ---
 
-## **✅ Estado actual del desarrollo**
+## 💻 Frontend Unity
 
-- [x] Interfaz WPF iniciada
-- [x] Implementación de gráficos con LiveCharts
-- [x] Estructura de carpetas organizada
-- [x] Proyecto compilando correctamente
-- [ ] Backend en desarrollo por otro miembro del equipo
-- [ ] Simulación final en Unity pendiente
+- Interfaz UI funcional en Unity con TextMeshPro y botones.
+- Se conecta con un backend en FastAPI para:
+  - Obtener recomendaciones energéticas inteligentes.
+  - Exportar recomendaciones en formato PDF.
+
+📍 Revisa: [`frontend/unity/Assets/HOLOTWIN_UI/README.md`](./frontend/unity/Assets/HOLOTWIN_UI/README.md)
 
 ---
 
+## 🚀 Tecnologías usadas
 
-## **📋 Requisitos**
+- **Unity** 6.1.0
+- **TextMeshPro** para visualización UI
+- **C#** para lógica de frontend
+- **FastAPI** (esperado en backend)
+- **JSON + REST API**
 
-- **Frontend:**
-  - **Unity (versión 2021 o superior)**
-  - **C#**
-  
-- **Backend:**
-  - **Python 3.x**
-  - **Flask o FastAPI** (para el desarrollo de la API)
-  - **PostgreSQL** (base de datos)
-  
-- **Contenedores:**
-  - **Docker** (para contenedores y orquestación)
-
-- **Dependencias del Proyecto:**
-  - **JWT** para autenticación.
-  - **Swagger** para la documentación de la API.
-
- 
 ---
 
-## **👨‍🎓 Creado por estudiantes de la Universidad Santiago de Cali**
+## 🧪 Cómo ejecutar
 
-Este proyecto es parte del trabajo académico realizado por estudiantes de la Universidad Santiago de Cali como parte de un proyecto para simular el consumo energético de un edificio universitario utilizando tecnologías avanzadas como gemelos digitales, simulaciones en tiempo real, y análisis de datos.
+1. Abre Unity y carga el proyecto desde `frontend/unity/`
+2. Asegúrate de tener el backend activo en `http://localhost:8000`
+3. Ejecuta la escena principal con el Canvas y prueba las funcionalidades
+
+---
+
+## 🧠 Estado actual del repositorio
+
+✅ Backend removido  
+✅ Estructura limpia  
+✅ Frontend funcional  
+✅ Conexión activa a API REST
 
 ---
