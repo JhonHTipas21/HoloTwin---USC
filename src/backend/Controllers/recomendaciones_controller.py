@@ -1,41 +1,35 @@
-from fastapi import APIRouter, Depends
+# src/backend/Controllers/recomendaciones_controller.py
+
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from ..Utils.conexion_db import SessionLocal
+from ..Utils.conexion_db import get_db
 from ..Models import models
 from ..IA_scripts import recomendador
 
-# Crear una instancia del router FastAPI para los endpoints de recomendaciones
 router = APIRouter()
 
 @router.get("/recomendaciones")
-def obtener_recomendaciones(usuario_id: int, db: Session = Depends(SessionLocal)):
+def obtener_recomendaciones(usuario_id: int, db: Session = Depends(get_db)):
     """
-    Obtiene recomendaciones personalizadas y adapatadas basadas en el historial de consumo de un usuario.
+    Obtiene recomendaciones basadas en el historial de consumo del usuario.
 
     Args:
-        usuario_id (int): Identificador del usuario para el cual se generarán las recomendaciones
-        db (Session): Dependencia de sesión de base de datos
+        usuario_id (int): ID del usuario
+        db (Session): Sesión de base de datos
 
     Returns:
-        dict: Diccionario conteniendo una lista de recomendaciones generadas
-              basadas en el patrón de consumo del usuario
-
-    Example:
-        {
-            "recomendaciones": [
-                "Recomendación 1",
-                "Recomendación 2",
-                ...
-            ]
-        }
+        dict: Recomendaciones generadas por el sistema
     """
-    # Obtener todos los registros de consumo del usuario
-    consumos = db.query(models.Consumo).filter(models.Consumo.usuario_id == usuario_id).all()
-    
-    # Extraer los valores de energía de los consumos
-    valores = [c.energia_kwh for c in consumos]
-    
-    # Generar y retornar las recomendaciones usando el modelo de IA
-    return {"recomendaciones": recomendador.generar_recomendaciones(valores)}
+    try:
+        consumos = db.query(models.Consumo).filter(models.Consumo.usuario_id == usuario_id).all()
 
-    
+        if not consumos:
+            return {"recomendaciones": ["No se encontraron consumos para este usuario."]}
+
+        valores = [c.energia_kwh for c in consumos]
+        recomendaciones = recomendador.generar_recomendaciones(valores)
+
+        return {"recomendaciones": recomendaciones}
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

@@ -8,7 +8,7 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = os.getenv("GEMINI_API_URL")
 GEMINI_TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", 0.7))
-
+print("🧪 GEMINI_API_URL cargado:", GEMINI_API_URL)
 
 def generate_recommendation(prompt: str) -> str:
     """
